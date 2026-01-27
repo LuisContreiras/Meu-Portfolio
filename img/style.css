@@ -1,0 +1,456 @@
+:root {
+    --primary-color: #ff230b;
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    height: 80px;
+    background: rgba(18, 18, 18, 0.95);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    position: relative;
+    width: 150px;
+    height: 100%;
+}
+
+.logo img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: auto;
+    /* Aumentei para destacar a logo */
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(-1deg);
+}
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+}
+
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+  border-bottom: 0.1rem solid var(--primary-color);
+    color: var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 35, 11, 0.5);
+    box-shadow: 0 0 40px rgba(255, 35, 11, 0.6);
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+.cv {
+    align-items: center;
+}
+
+/* Sobre & Digitação */
+section {
+    padding: 100px 10%;
+}
+
+.about-text {
+    text-align: left;
+    max-width: 800px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+#typing-text {
+    font-family: 'Courier New', monospace;
+    font-size: 1.8rem;
+    min-height: 1.8rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* Cursor piscando permanece */
+#typing-text::after {
+    content: '|';
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Habilidades */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skills span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--card-bg);
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--primary-color);
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 35, 11, 0.3);
+}
+
+.skills span img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Projetos */
+.project-grid {
+    display: grid;
+    padding-top: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    align-items: center;
+    background: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+/* Contato */
+.contact-container {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+}
+
+.contact-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+.contact-item i {
+
+    color: var(--primary-color);
+    font-size: 1.5rem;
+
+}
+
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.contact-form input,
+.contact-form textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    background: #252525;
+
+    border: 1px solid #333;
+
+    border-radius: 5px;
+
+    color: white;
+}
+
+/* Animações Fade */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.highlight {
+      color: var(--primary-color);
+}
+
+.btn:hover {
+
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 35, 11, 0.6);
+
+}
+
+.btn, .btn-sm {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+footer {
+
+    background: #0a0a0a;
+
+    padding: 40px 10%;
+
+    text-align: center;
+
+    border-top: 1px solid #333;
+
+}
+
+
+
+.social-links {
+
+    margin-top: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+.social-links a {
+
+    color: white;
+
+    font-size: 1.5rem;
+
+    transition: 0.3s;
+
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+
+}
+
+/* Fundo do Modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(8px);
+}
+
+/* Caixa de Conteúdo */
+.modal-content {
+    background-color: var(--card-bg);
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid var(--primary-color);
+    width: 80%;
+    max-width: 700px;
+    border-radius: 15px;
+    position: relative;
+    transform: scale(0.7);
+    transition: 0.3s all ease-in-out;
+}
+
+/* Quando o modal abre, ele ganha essa classe via JS */
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+/* Botão Fechar */
+.close-modal {
+    position: absolute;
+    right: 20px; top: 10px;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.close-modal:hover { color: var(--primary-color); }
+
+.modal-header h3 { color: var(--primary-color); margin-bottom: 15px; }
+.tech-stack { margin: 15px 0; font-style: italic; color: #888; }
+
+/* --- Estilos do Alerta de Contato --- */
+
+.alert-modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Classe ativada pelo JS */
+.alert-modal.active {
+    display: flex;
+}
+
+.alert-content {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid var(--primary-color);
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 0 30px rgba(255, 35, 11, 0.2);
+    animation: popIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Configuração da Imagem do Boneco */
+.alert-icon {
+    width: 150px; /* Tamanho ajustado para visibilidade */
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(255, 35, 11, 0.3));
+}
+
+#alertMessage {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+/* Botão de OK dentro do alerta */
+#alertOk {
+    padding: 10px 40px;
+    border: none;
+    transition: 0.3s;
+}
+
+/* Animação de entrada */
+@keyframes popIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
