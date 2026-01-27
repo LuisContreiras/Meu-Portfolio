@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luís Contreiras | Portfólio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" media="screen">
+    <link rel="stylesheet" href="css/responsivo.css">
+    
+</head>
+
+<body>
+    <div class="interface">
+
+        <nav>
+    <div class="logo">
+        <a href="#home"> 
+            <img src="img/logo1.png" alt="logotipo">
+        </a>
+    </div>
+    
+    <div class="menu-mobile-icon" id="btn-menu-mobile">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <ul id="menu-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+    </ul>
+</nav>
+
+<div class="overlay-menu" id="overlay-menu"></div>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <img src="img/me4.png" alt="Luís Contreiras" class="profile-pic">
+            <h1>Olá, eu sou o <span class="highlight">Luís Contreiras</span>!</h1>
+            <p>Desenvolvedor  & Service Desk</p>
+            <a href="#projetos" class="btn">Ver Meus Projetos</a>
+        <a href="curiculo.html" target="_blank" class="btn"> Ver
+                Currículo <img class="CV" width="20"
+                    height="18" src="https://img.icons8.com/ios/100/FFFFFF/resume.png" alt="download--v1" /></a>
+        </div>
+    </header>
+
+    <section id="sobre" class="about">
+        <h2>Sobre Mim</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <h3 id="typing-text" class="highlight"></h3>
+
+                <p>Sou estudante da área de Tecnologia da Informação, com interesse em atuar no suporte técnico e
+                    atendimento ao usuário final. Tenho facilidade em lidar com pessoas, compreender problemas técnicos
+                    e buscar soluções de forma clara, objetiva e organizada.</p>
+                <p>Possuo conhecimentos em informática, sistemas operacionais, redes básicas e resolução de problemas
+                    comuns do dia a dia. Prezo por um atendimento paciente, responsável e focado na experiência do
+                    usuário.</p>
+                <p>Busco uma oportunidade de estágio em suporte técnico/Service Desk, onde eu possa aplicar meus
+                    conhecimentos e crescer profissionalmente.</p>
+
+                <h3>Minhas Habilidades</h3>
+                <div class="skills">
+                    <span><img src="https://img.icons8.com/color/24/html-5--v1.png" /> HTML5</span>
+                    <span><img src="https://img.icons8.com/color/24/css3.png" /> CSS3</span>
+                    <span><img src="https://img.icons8.com/ios-filled/50/ff230b/javascript-logo.png" />
+                        JavaScript</span>
+                    <span><img src="https://img.icons8.com/officel/24/react.png" /> React</span>
+                    <span><img src="https://img.icons8.com/color/48/git.png" /> Git</span>
+                    <span><img src="https://img.icons8.com/glyph-neue/64/ff230b/sql--v2.png" /> SQL</span>
+                    <span><img src="https://img.icons8.com/color/48/office-365.png" /> Office 365</span>
+                 <!--  <span><img src="https://img.icons8.com/plasticine/100/elephant.png" /> PHP</span>  -->   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="projects">
+        <h2>Projetos em Destaque</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="img/projeto1.png" alt="Projeto Saneamento">
+                <div class="project-info">
+                    <h3>InfraCB</h3>
+                    <p>Desafios e oportunidades para saneamento, educação e moradia.</p>
+                    <a href="javascript:void(0)" class="btn-sm open-modal" data-project="infra">Detalhes</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="img/projeto2.png" alt="Cálculo de Média">
+                <div class="project-info">
+                    <h3>Cálculo de Média</h3>
+                    <p>Sistema inteligente para cálculos aritméticos facilitando a análise de notas.</p>
+                    <a href="javascript:void(0)" class="btn-sm open-modal" data-project="media">Detalhes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <h2>Contato</h2> 
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5567992275161"
+                        target="_blank">(67) 99227-5161</a></div>
+                <div class="contact-item"><i class="fas fa-envelope"></i> <a
+                        href="mailto:contreiras1308@gmail.com">contreiras1308@gmail.com</a></div>
+                <div class="contact-item"><i class="fab fa-linkedin"></i> <a
+                        href="https://www.linkedin.com/in/luís-gabriel-contreiras-6002b6381"
+                        target="_blank">LinkedIn</a></div>
+                <div class="contact-item"><i class="fab fa-github"></i> <a href="https://github.com/LuisContreiras"
+                        target="_blank">GitHub</a></div>
+            </div>
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="contactForm">
+                <input type="hidden" name="access_key" value="c6fc9ffa-3c6f-4daa-9beb-e381be300e75">
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+                <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ALERT MODAL -->
+    <div id="alertModal" class="alert-modal">
+        <div class="alert-content">
+            <img id="alertIcon" src="" alt="" class="alert-icon" />
+            <p id="alertMessage"></p>
+            <button class="btn" id="alertOk">OK</button>
+        </div>
+    </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 - Luís Gabriel Contreiras</p>
+            <div class="social-links">
+                <a href="https://github.com/LuisContreiras" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/luís-gabriel-contreiras-6002b6381" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+
+</html>
