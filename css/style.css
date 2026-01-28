@@ -197,7 +197,8 @@ section {
 }
 
 .project-card {
-    align-items: center;
+    width: 300px;
+    align-items: flex-end;
     background: var(--card-bg);
     border: 1px solid #333;
     border-radius: 10px;
