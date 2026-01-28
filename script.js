@@ -82,6 +82,12 @@ menuLinks.querySelectorAll('a').forEach(link => {
             desc: "O InfraCB foi um projeto acadêmico que me proporcionou a primeira experiência prática com tecnologia aplicada a um problema real da sociedade, além de reforçar a importância do trabalho em equipe. O sistema desenvolvido permite que cidadãos registrem, de forma simples e acessível, problemas de saneamento em seus bairros. Essas informações são organizadas e transformadas em um mapeamento que auxilia na identificação de áreas prioritárias para manutenção, contribuindo para a melhoria dos serviços públicos e da qualidade de vida da população.",
             link: "https://luiscontreiras.github.io/infraCB/"
         },
+        Linktree: {
+            title: "Linktree",
+            tech: "HTML, CSS, JavaScript",
+            desc: "Este Linktree pessoal foi desenvolvido como um projeto prático com o objetivo de centralizar meus principais links profissionais em um único espaço, facilitando o acesso ao meu portfólio e às minhas redes. O projeto permitiu aplicar conceitos de HTML, CSS e JavaScript, com foco em design responsivo, organização visual e experiência do usuário. Além disso, conta com um efeito de digitação animado que torna a navegação mais dinâmica e agradável, mantendo a estabilidade do layout em diferentes dispositivos.",
+            link: "https://luiscontreiras.github.io/Linktree/"
+        },
         media: {
             title: "Cálculo de Média",
             tech: "JavaScript, Logística Aritmética",
