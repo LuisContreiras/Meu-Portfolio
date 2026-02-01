@@ -6,7 +6,25 @@
 }
 body{
     background-color: white;
+    position: relative;
+    overflow-x: hidden;
 }
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 1900px;
+  height: 100vh;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to left,
+    rgba(240, 113, 35, 0.529),
+    transparent
+  );
+}
+
 
  * {
     margin: 0;
@@ -35,24 +53,50 @@ body{
 }
 
 .tudo{
-   box-shadow: 40px 0 60px rgba(0, 0, 0, 0.15);
+  
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 300px;
     text-align: center;
+    color: #1e1e1e;
 }
 .ops{
+    position: fixed;
+    top: 30px;
+    left: 30px;
     font-size: 100px;
     color: var(--primary-color);
 }
+@keyframes blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color: #1e1e1e;
+    margin-top: 70px;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
 #typing-text::after {
     content: '|';
     margin-left: 5px;
-    animation: blink 0.2s infinite;
+    animation: blink 0.5s infinite;
 
 }
 #typing-text {
@@ -81,17 +125,10 @@ h1{
     border: transparent;
     font-weight: bold;
     margin-top: 40px;
-    margin-left: 170px;
+    margin-left: 160px;
     overflow: hidden;
     cursor: pointer;
     text-align: center;
     align-items: center;
 }
 
-p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: larger;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
