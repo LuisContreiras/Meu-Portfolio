@@ -35,7 +35,7 @@ body{
 }
 
 .tudo{
-   
+   box-shadow: 40px 0 60px rgba(0, 0, 0, 0.15);
     display: flex;
     justify-content: center;
     align-items: center;
