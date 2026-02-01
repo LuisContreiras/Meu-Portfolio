@@ -4,7 +4,6 @@ if ('scrollRestoration' in history) {
 
 document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0);
-        // Lógica Menu Mobile
 const btnMenu = document.getElementById('btn-menu-mobile');
 const menuLinks = document.getElementById('menu-links');
 const overlay = document.getElementById('overlay-menu');
