@@ -8,6 +8,7 @@ body{
     background-color: white;
     position: relative;
     overflow-x: hidden;
+    z-index: 1;
 }
 body::after {
   content: "";
@@ -17,11 +18,12 @@ body::after {
   width: 1900px;
   height: 100vh;
   pointer-events: none;
-
+  
   background: linear-gradient(
-    to left,
+    to right,
     rgba(240, 113, 35, 0.529),
     transparent
+   
   );
 }
 
@@ -33,11 +35,13 @@ body::after {
 
 .content{
     display: flex;
+    position: relative;
     justify-content: center;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     margin-top: 100px;
+    z-index: 2;
 }
 .imagem {
     display: block;
@@ -57,7 +61,7 @@ body::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+
 }
 h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
