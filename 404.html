@@ -4,11 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="estilizacao.css">
     <title>Pagina não encontrada</title>
 </head>
 <body>
-    <H1>4<img src="img/bonecos/personagem se segurando.png" alt="0">4</H1>
-    <p>OPSS.. Página não encontrada! Atualize ou volte para o início</p>
-    <button href="index.html">voltar</button>
+
+<div class="content">
+        <div>
+        <h1 class="ops" id="typing-text"></h1> 
+        <p>Página não encontrada! Atualize ou volte para o início </p>
+        <a href="index.html" class="btn">voltar</a>
+    </div>
+
+  <div class="tudo">
+    <H1>4</H1>
+    <img src="img/bonecos/personagem se segurando.png" alt="0" class="imagem">
+    <H1>4</H1>
+   </div>
+
+</div>
+
+ </div>
+
+   <script>
+    // Efeito de Digitação
+    const textElement = document.getElementById("typing-text");
+    const textToType = "OPSS...";
+    let index = 0;
+    let isDeleting = false;
+    function typeEffect() {
+        const currentText = textElement.textContent;
+
+        if (isDeleting) {
+            textElement.textContent = textToType.substring(0, index - 1);
+            index--;
+        } else {
+            textElement.textContent = textToType.substring(0, index + 1);
+            index++;
+        }
+        let typingSpeed = isDeleting ? 100 : 150;
+        if (!isDeleting && index === textToType.length) {
+            isDeleting = true;
+            typingSpeed = 2000;
+        }
+        else if (isDeleting && index === 0) {
+            isDeleting = false;
+            typingSpeed = 500;
+        }
+        setTimeout(typeEffect, typingSpeed);
+    }
+    setTimeout(typeEffect, 1000);
+   </script>
+
 </body>
 </html>
