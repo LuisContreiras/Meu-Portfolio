@@ -12,18 +12,19 @@
     scroll-behavior: smooth;
 }
 
+
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+   background-color: var(--bg-color);
 }
+    
+
 .interface{
     max-width: 2500px;
     margin: 0 auto;
-    
-    
 }
 /* Navegação */
 nav {
@@ -32,7 +33,7 @@ nav {
     align-items: center;
     padding: 0 10%;
     height: 80px;
-    background: rgba(18, 18, 18, 0.95);
+    background-color: var(--bg-color);
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -66,8 +67,6 @@ h2 {
     display: inline-block;
 }
 
-
-
 nav ul {
     display: flex;
     list-style: none;
@@ -94,6 +93,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
+    
 }
 
 .profile-pic {
@@ -189,22 +189,65 @@ section {
 }
 
 /* Projetos */
+.carrossel{
+    display: inline;
+    max-width: 800px;
+    align-items: flex-end;
+}
 .project-grid {
-    display: grid;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    width: 100%;
+    display: flex;
     padding-top: 35px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    
 }
 
+
+
+
+
 .project-card {
+    flex: 0 0 20em;
+    
+    padding: 2px;
     width: 300px;
-    align-items: flex-end;
+    align-items: center;
     background: var(--card-bg);
     border: 1px solid #333;
     border-radius: 10px;
-    overflow: hidden;
     transition: 0.3s;
 }
+.scroll-btn {
+    margin: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary-color, #ff230b);
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.9;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.scroll-btn.right {
+    right: 10px;
+}
+.scroll-btn.left {
+    left: 10px;
+}
+
 
 .project-card:hover {
     transform: translateY(-10px);
@@ -223,6 +266,8 @@ section {
 }
 
 /* Contato */
+
+
 .contact-container {
 
     display: grid;
@@ -314,8 +359,7 @@ section {
 }
 
 footer {
-
-    background: #0a0a0a;
+    background-color: #000;
 
     padding: 40px 10%;
 
@@ -477,3 +521,5 @@ footer {
     font-size: 1.8rem;
     cursor: pointer;
 }
+
+

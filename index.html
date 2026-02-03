@@ -40,11 +40,11 @@
         <div class="hero-content">
             <img src="img/me4.png" alt="Luís Contreiras" class="profile-pic">
             <h1>Olá, eu sou o <span class="highlight">Luís Contreiras</span>!</h1>
-            <p>Desenvolvedor  & Service Desk</p> 
+            <p>Desenvolvedor  & Service Desk</p>
             <a href="#projetos" class="btn">Ver Meus Projetos</a>
-     <!--  <a href="curiculo.html" target="_blank" class="btn"> Ver
+        <!----><a href="curiculo.html" target="_blank" class="btn"> Ver
                 Currículo <img class="CV" width="20"
-                    height="18" src="https://img.icons8.com/ios/100/FFFFFF/resume.png" alt="download--v1" /></a>-->
+                    height="18" src="https://img.icons8.com/ios/100/FFFFFF/resume.png" alt="download--v1" /></a>
         </div>
     </header>
 
@@ -73,7 +73,7 @@
                     <span><img src="https://img.icons8.com/color/48/git.png" /> Git</span>
                     <span><img src="https://img.icons8.com/glyph-neue/64/ff230b/sql--v2.png" /> SQL</span>
                     <span><img src="https://img.icons8.com/color/48/office-365.png" /> Office 365</span>
-                 <span><img src="https://img.icons8.com/fluency/48/anydesk.png" /> AnyDesk</span> 
+                 <!--  <span><img src="https://img.icons8.com/plasticine/100/elephant.png" /> PHP</span>  -->   
                 </div>
             </div>
         </div>
@@ -81,7 +81,14 @@
 
     <section id="projetos" class="projects">
         <h2>Projetos em Destaque</h2>
+
+        <div class="carrossel">
+        
         <div class="project-grid">
+            
+            <button class="scroll-btn left" aria-label="Scroll para esquerda">
+        &#10094; </button>
+
             <div class="project-card">
                 <img src="img/projeto1.png" alt="Projeto Saneamento">
                 <div class="project-info">
@@ -106,9 +113,31 @@
                     <h3>Cálculo de Média</h3>
                     <p>Sistema inteligente para cálculos aritméticos facilitando a análise de notas.</p>
                     <a href="javascript:void(0)" class="btn-sm open-modal" data-project="media">Detalhes</a>
-                </div>
+            </div></div>
+            
+            <div class="project-card">
+                <img src="img/codigo.png" alt="Em Desinvolvimento">
+                <div class="project-info">
+                    <h3>Em Desinvolvimento</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolores quisquam rem nam debitis, fugiat vel distinctio sint quia.</p>
+                    <a href="javascript:void(0)" class="btn-sm open-modal" data-project="construction">Detalhes</a>
+            </div></div>
+
+            <div class="project-card">
+                <img src="img/codigo.png" alt="Em Desinvolvimento">
+                <div class="project-info">
+                    <h3>Em Desinvolvimento</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus consectetur dolorum ipsam id. Sequi quae unde id impedit.</p>
+                    <a href="javascript:void(0)" class="btn-sm open-modal" data-project="construction">Detalhes</a>
             </div>
+
         </div>
+
+            <button class="scroll-btn right" aria-label="Scroll para direita"> &#10095;</button>
+
+     </div>
+        
+        
     </section>
 
     <section id="contato" class="contact">
@@ -169,6 +198,3 @@
 </body>
 
 </html>
-
-
-

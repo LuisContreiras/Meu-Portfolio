@@ -52,8 +52,23 @@
         display: block;
         z-index: 1;
     }
+
+
+    
 }
+
+@media screen  and (min-width:480px) {
+    .project-grid::-webkit-scrollbar{
+    display: none;
+
+}
+    
+}
+
 @media screen and (max-width: 480px) {
+
+
+
     .hero {
     height: 100vh;
     display: flex;
@@ -77,6 +92,12 @@
   .project-grid {
         grid-template-columns: 1fr;
         padding: 0 15px;
+    }
+
+    
+    .scroll-btn{
+        
+        display: none;
     }
 
 }
