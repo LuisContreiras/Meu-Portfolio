@@ -4,6 +4,7 @@ if ('scrollRestoration' in history) {
 
 document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0);
+        // Lógica Menu Mobile
 const btnMenu = document.getElementById('btn-menu-mobile');
 const menuLinks = document.getElementById('menu-links');
 const overlay = document.getElementById('overlay-menu');
@@ -92,6 +93,12 @@ menuLinks.querySelectorAll('a').forEach(link => {
             tech: "JavaScript, Logística Aritmética",
             desc: "O Sistema de Cálculo de Média surgiu a partir de uma demanda real de um familiar, que precisava calcular manualmente suas notas após a realização de simulados e provas de uma banca avaliadora. Ao identificar essa dificuldade recorrente, desenvolvi uma solução simples e eficiente para automatizar os cálculos, reduzindo erros e otimizando o tempo do usuário. O projeto reforçou minha capacidade de compreender necessidades reais, transformar problemas cotidianos em soluções tecnológicas e utilizar a programação como ferramenta de apoio ao usuário final.",
             link: "https://luiscontreiras.github.io/SistemadeCalculo/"
+        },
+        construction: {
+            title: "Projeto em construção",
+            tech: "JavaScript, HTML5  e CSS3",
+            desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere eius, dolorum quisquam molestiae vitae dolor incidunt repudiandae. Voluptatem exercitationem saepe odit autem nisi nobis laborum eligendi reiciendis placeat, enim illum!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores deserunt optio nulla! Aut tempore beatae velit, pariatur blanditiis asperiores porro, delectus cum id iste distinctio ad explicabo ex reiciendis!Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quod quibusdam debitis sit quos rerum voluptas, eaque quas cupiditate ipsa illo a nobis omnis libero. Fugiat nobis laboriosam esse quia.",
+            link: ""
         }
     };
 
@@ -179,3 +186,13 @@ alertOk.addEventListener("click", () => {
 
 });
 
+// botão de rolagem dos projetos
+const grid = document.querySelector('.project-grid')
+
+document.querySelector('.right').addEventListener('click', () => {
+    grid.scrollBy({ left: 400, behavior: 'smooth' })
+})
+
+document.querySelector('.left').addEventListener('click', () => {
+    grid.scrollBy({ left: -300, behavior: 'smooth' })
+})
