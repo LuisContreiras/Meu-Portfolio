@@ -360,6 +360,7 @@ section {
 
 footer {
     background-color: #000;
+    background-image: radial-gradient( #6f0707, #610000, #2e0000, #0000);
 
     padding: 40px 10%;
 
